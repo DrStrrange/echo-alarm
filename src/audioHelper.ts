@@ -169,3 +169,4 @@ function playFallbackTriggerTone() {
     fallbackAudio.play().catch(() => {});
   }
 }
+
