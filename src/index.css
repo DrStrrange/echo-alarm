@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom theme colors to represent premium Material You color scheme */
+  --color-brand-primary: #2563eb;
+  --color-brand-primary-light: #3b82f6;
+  --color-brand-secondary: #0ea5e9;
+  --color-brand-bg: #f8fafc;
+  --color-m3-surface: #ffffff;
+  --color-m3-surface-variant: #f1f5f9;
+  --color-m3-on-surface: #0f172a;
+}
+
+/* Custom scrollbars for voice alarm sound-list scrolling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.4);
+}
+
+/* Custom CSS for Android Mock status bars */
+.notch-clip {
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%);
+}
+
+@keyframes signalPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+.simulated-signal {
+  animation: signalPulse 2s infinite ease-in-out;
+}
+

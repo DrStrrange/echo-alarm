@@ -1,0 +1,8 @@
+{
+  "name": "Smart Voice Alarm",
+  "description": "An Android-style smart alarm app that plays custom text-to-speech messages and recorded alerts. Users can manage schedules, record personalized voice commands, and hear them when the alarm triggers.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
