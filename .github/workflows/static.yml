@@ -3,7 +3,7 @@ name: Deploy EchoAlarm to Pages
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
+  workflow_dispatch: # This adds the "Run workflow" button you need!
 
 permissions:
   contents: read
@@ -18,7 +18,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps: deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # This tells GitHub to look inside your compiled Vite build folder
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
